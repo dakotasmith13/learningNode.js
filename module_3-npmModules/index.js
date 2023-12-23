@@ -1,3 +1,6 @@
-// NODEMON npm module - reruns file when changes
+// NODEMON npm module - reruns file when changes AS DEV DEPENDENCY: npm i nodemon -D
+// DATE-FNS npm module - date functions
 
-console.log('testing!');
+const { format } = require('date-fns');
+
+console.log(format(new Date(), 'yyyyMMdd\tHH:mm:ss'));
