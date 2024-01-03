@@ -1,0 +1,10 @@
+20240103	13:33:50	caa791ac-a883-458c-94b5-447217c38ea9	GET	undefined	/
+20240103	13:33:50	554181ed-e225-43ad-97a4-ec3313c778ba	GET	undefined	/css/style.css
+20240103	13:36:11	84192b6d-fcc0-4f10-9bb8-f2ff30aa9631	GET	undefined	/
+20240103	13:36:11	685af5ef-f3fc-48f8-b4b9-6a0c5a838757	GET	undefined	/css/style.css
+20240103	13:37:44	9c919b39-a1de-44db-94b4-da5311040578	OPTIONS	https://www.google.com	/
+20240103	13:37:44	3732373f-c830-409b-a4ca-32f33d7fd6c3	GET	https://www.google.com	/
+20240103	13:39:10	792e85ff-55f3-446d-b06d-41e71a7cd73c	OPTIONS	https://www.google.com	/
+20240103	13:39:11	8fb3ed1c-f8c2-4bdf-9473-d891a39772e5	GET	https://www.google.com	/
+20240103	13:44:31	b48d5262-8dc1-453e-a816-073bea4ec77e	OPTIONS	https://www.google.com	/
+20240103	13:44:31	ae745de6-9f87-4dcf-8ee4-4931fef58ed9	GET	https://www.google.com	/
