@@ -38,52 +38,14 @@ app.use(express.json());
 
 // serve static files
 app.use(express.static(path.join(__dirname, "/public")));
+app.use('/subdir', express.static(path.join(__dirname, "/public")));
 
-app.get("^/$|/index(.html)?", (req, res) => {
-  // begin w/ a slash and end with a slash, or index.html
-  // res.sendFile('./views/index.html', { root: __dirname });
-  res.sendFile(path.join(__dirname, "views", "index.html"));
-});
+// routes
+app.use('/', require('./routes/root'));
+app.use('/subdir', require("./routes/subdir")); // will route any request for subdir to the subdir router
+app.use('/employees', require("./routes/api/employees")); 
 
-app.get("/new-page(.html)?", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "new-page.html")); // Middleware
-});
-
-app.get("/old-page(.html)?", (req, res) => {
-  res.redirect(301, "/new-page.html"); // sends 302 by default, we want 301 (permanent)
-});
-
-// Route handlers (req, res) anon function are route handlers
-app.get(
-  "/hello(.html)?",
-  (req, res, next) => {
-    console.log("attempted to load hello.html");
-    next(); // moves on to next handler
-  },
-  (req, res) => {
-    res.send("Hellow world!");
-  }
-);
-
-// chaining route handlers
-const one = (req, res, next) => {
-  console.log("one");
-  next();
-};
-
-const two = (req, res, next) => {
-  console.log("two");
-  next();
-};
-
-const three = (req, res) => {
-  console.log("three");
-  res.send("Finished!");
-};
-
-app.get("/chain(.html)?", [one, two, three]);
-
-// app.use('/') does not accept regEx - for middleware
+// app.use('/') for middleware
 // anything that made it here should get 404
 app.all("*", (req, res) => { // for routing
   res.status(404);
