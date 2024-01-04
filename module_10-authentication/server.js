@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const cors = require("cors");
-const corsOptions = require('./config/corsOptions');
+const corsOptions = require("./config/corsOptions");
 const { logger } = require("./middleware/logEvents");
 const errorHandler = require("./middleware/errorHandler");
 const PORT = process.env.PORT || 3500;
@@ -24,12 +24,14 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "/public")));
 
 // routes
-app.use('/', require('./routes/root'));
-app.use('/employees', require("./routes/api/employees")); 
+app.use("/", require("./routes/root"));
+app.use("/register", require("./routes/register"));
+app.use("/employees", require("./routes/api/employees"));
 
 // app.use('/') for middleware
 // anything that made it here should get 404
-app.all("*", (req, res) => { // for routing
+app.all("*", (req, res) => {
+  // for routing
   res.status(404);
   if (req.accepts("html")) {
     res.sendFile(path.join(__dirname, "views", "404.html"));
