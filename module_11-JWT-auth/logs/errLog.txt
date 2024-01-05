@@ -1,1 +1,3 @@
 20240103	13:54:35	ab2993e2-14ce-4331-b204-3c650dfee06f	Error: Not allowed by CORS
+20240104	20:50:28	1ba60386-ba10-4d97-851e-eac85667cc1e	SyntaxError: Unexpected token 'e', "#" is not valid JSON
+20240104	20:50:56	1626e636-5232-4b46-8144-78a1d4e47892	SyntaxError: Unexpected token 'e', "#" is not valid JSON
