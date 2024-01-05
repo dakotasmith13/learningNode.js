@@ -110,3 +110,6 @@
 20240105	16:59:35	7fbf7187-2b3c-4227-95bd-6bfcc481a246	POST	undefined	/auth
 20240105	16:59:48	0627d081-fccc-4a24-8d8f-729e93a6027a	POST	undefined	/employees
 20240105	16:59:53	b205536a-916c-4c4d-aa13-04f35e73cd63	DELETE	undefined	/employees
+20240105	18:31:13	92564e1b-3e29-4530-badc-c3f4e703c103	POST	undefined	/register
+20240105	18:31:58	a16a986b-040f-4426-8b2e-9da2d0867f18	POST	undefined	/register
+20240105	18:35:32	4c261e5f-80ea-4ada-af1d-663792cb0ad9	GET	undefined	/employees/1
